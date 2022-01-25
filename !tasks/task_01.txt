@@ -1,0 +1,1 @@
+1) Создать схему своих entity(Product, Category, SubCategory, Characteristic). Расписать их поля и маппинг

@@ -13,6 +13,6 @@ public class Category extends BaseEntity{
     private Boolean isActive;
 
 
-    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
-    private List<SubCategory> subCategory;
+//    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
+//    private List<SubCategory> subCategory;
 }

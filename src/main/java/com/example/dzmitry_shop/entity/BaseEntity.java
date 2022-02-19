@@ -3,6 +3,8 @@ package com.example.dzmitry_shop.entity;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import java.io.Serializable;
@@ -12,6 +14,8 @@ import java.io.Serializable;
 @Setter
 public class BaseEntity implements Serializable {
 
+//    TODO: нужна стратегия по которойбудет формироваться айдишник, задаётся аннотацией @GeneratedValue
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 }

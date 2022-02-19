@@ -10,11 +10,9 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-
 public class Product extends BaseEntity {
-    @Id
-    @Column(name = "id", nullable = false)
-    private Long id;
+
+//    TODO: Зачем здесь Id, если ты его наследуешь с BaseEntity?
 
     @Column(unique = true)
     private String name;

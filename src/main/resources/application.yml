@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/shop
+    username: db-user
+    password: db-password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        use_sql: false
+        format_sql: false
+        show_sql: false
+    show-sql: true

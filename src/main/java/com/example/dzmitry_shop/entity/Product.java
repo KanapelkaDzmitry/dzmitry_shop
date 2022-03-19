@@ -12,8 +12,6 @@ import javax.persistence.*;
 @Builder
 public class Product extends BaseEntity {
 
-//    TODO: Зачем здесь Id, если ты его наследуешь с BaseEntity?
-
     @Column(unique = true)
     private String name;
 

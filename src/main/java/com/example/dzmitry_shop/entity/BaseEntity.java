@@ -14,7 +14,6 @@ import java.io.Serializable;
 @Setter
 public class BaseEntity implements Serializable {
 
-//    TODO: нужна стратегия по которойбудет формироваться айдишник, задаётся аннотацией @GeneratedValue
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

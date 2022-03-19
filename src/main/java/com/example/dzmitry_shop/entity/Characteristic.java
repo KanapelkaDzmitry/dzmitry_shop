@@ -17,9 +17,9 @@ import javax.persistence.Entity;
 @Setter
 public class Characteristic extends BaseEntity{
 
-//    TODO: Характеристики ни с чем не смаплены, надо их привязать
-
     @Column(unique = true)
     private String name;
+
+
 
 }

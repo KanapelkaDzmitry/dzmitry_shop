@@ -34,7 +34,7 @@ public class SubCategory extends BaseEntity{
             inverseJoinColumns = @JoinColumn(name = "characteristic_id"),
             foreignKey = @ForeignKey(name = "fk_subcategory_to_characteristic")
     )
-    private Set<Characteristic> characteristics;
+    private List<Characteristic> characteristics;
 
     @OneToMany(mappedBy = "subCategory", fetch = FetchType.LAZY, cascade = CascadeType.PERSIST)
     private List<Product> products;

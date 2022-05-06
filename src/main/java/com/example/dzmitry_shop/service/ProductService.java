@@ -5,9 +5,9 @@ import com.example.dzmitry_shop.dto.ProductDto;
 import com.example.dzmitry_shop.entity.Product;
 import com.example.dzmitry_shop.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class ProductService{
@@ -21,8 +21,8 @@ public class ProductService{
         this.productConverter = productConverter;
     }
 
-    public List<ProductDto> findAllByProducts() {
-        List<Product> products = productRepository.findAll();
-        return productConverter.convertList(products);
+    public Page<ProductDto> findAll(Pageable pageable) {
+        Page<Product> products = productRepository.findAll(pageable);
+        return productConverter.convertPage(products);
     }
 }

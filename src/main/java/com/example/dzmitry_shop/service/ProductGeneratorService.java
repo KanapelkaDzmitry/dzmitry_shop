@@ -1,6 +1,7 @@
 package com.example.dzmitry_shop.service;
 
 import com.example.dzmitry_shop.entity.Product;
+import com.example.dzmitry_shop.entity.ProductStatus;
 import com.example.dzmitry_shop.entity.SubCategory;
 import com.example.dzmitry_shop.repository.ProductRepository;
 import com.example.dzmitry_shop.repository.SubCategoryRepository;
@@ -40,6 +41,7 @@ public class ProductGeneratorService {
                     .sellerCode(sellerCode)
                     .cost(random.nextInt(MAX_COST) + MIN_COST)
                     .quantity(random.nextInt(MAX_QUANTITY))
+                    .status(ProductStatus.AVAILABLE)
                     .subCategory(subCategories.get(random.nextInt(QUANTITY_SUBCATEGORIES - 1)))
                     .build();
             sellerCode++;

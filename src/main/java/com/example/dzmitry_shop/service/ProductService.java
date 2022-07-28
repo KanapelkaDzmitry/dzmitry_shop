@@ -1,9 +1,11 @@
 package com.example.dzmitry_shop.service;
 
 import com.example.dzmitry_shop.converter.ProductConverter;
+import com.example.dzmitry_shop.dto.ProductCriteriaDto;
 import com.example.dzmitry_shop.dto.ProductDto;
 import com.example.dzmitry_shop.entity.Product;
 import com.example.dzmitry_shop.repository.ProductRepository;
+import com.example.dzmitry_shop.specification.ProductSpecification;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -21,8 +23,9 @@ public class ProductService{
         this.productConverter = productConverter;
     }
 
-    public Page<ProductDto> findAll(Pageable pageable) {
-        Page<Product> products = productRepository.findAll(pageable);
+    public Page<ProductDto> findAll(ProductCriteriaDto productCriteriaDto, Pageable pageable) {
+        Page<Product> products =
+                productRepository.findAll(ProductSpecification.buildListFilter(productCriteriaDto), pageable);
         return productConverter.convertPage(products);
     }
 }

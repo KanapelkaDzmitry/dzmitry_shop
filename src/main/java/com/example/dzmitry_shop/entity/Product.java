@@ -25,4 +25,7 @@ public class Product extends BaseEntity {
     @ManyToOne(cascade = CascadeType.ALL,fetch = FetchType.LAZY)
     @JoinColumn(name = "subCategory_id")
     private SubCategory subCategory;
+
+    @Enumerated(EnumType.STRING)
+    private ProductStatus status = ProductStatus.MODERATION;
 }

@@ -2,7 +2,7 @@ package com.example.dzmitry_shop;
 
 public class Constants {
 
-    public static int QUANTITY_PRODUCT = 1000;
+    public static int QUANTITY_PRODUCT = 100;
     public static String PATH_TO_NOUN = "src/main/resources/files/masculine_noun.txt";
     public static String PATH_TO_ADJECTIVE = "src/main/resources/files/masculine_adjective.txt";
     public static String SEPARATOR = " ";

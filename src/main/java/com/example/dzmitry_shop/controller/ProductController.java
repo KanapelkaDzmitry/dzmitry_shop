@@ -1,5 +1,6 @@
 package com.example.dzmitry_shop.controller;
 
+import com.example.dzmitry_shop.dto.ProductCriteriaDto;
 import com.example.dzmitry_shop.dto.ProductDto;
 import com.example.dzmitry_shop.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +26,8 @@ public class ProductController {
     }
 
     @GetMapping
-    public Page<ProductDto> findAllByProducts(@PageableDefault Pageable pageable){
-        return productService.findAll(pageable);
+    public Page<ProductDto> findAllByProducts(ProductCriteriaDto dto, @PageableDefault Pageable pageable){
+        return productService.findAll(dto, pageable);
     }
 
 }

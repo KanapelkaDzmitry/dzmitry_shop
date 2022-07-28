@@ -1,9 +1,7 @@
 package com.example.dzmitry_shop.converter;
 
 import com.example.dzmitry_shop.dto.ProductDto;
-import com.example.dzmitry_shop.dto.SubCategoryDto;
 import com.example.dzmitry_shop.entity.Product;
-import com.example.dzmitry_shop.entity.SubCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
